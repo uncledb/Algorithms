@@ -1,7 +1,7 @@
 package selectionsort;
 
 /**
- * 简单选择排序
+ * 简单选择排序 选择排序是不稳定的算法
  * 
  * @author uncle
  * 
