@@ -13,6 +13,7 @@ public class BubbleSort {
 		BubbleSort b = new BubbleSort();
 		b.sort0();
 		b.sort1();
+		b.sort2();
 	}
 
 	/**
@@ -40,6 +41,26 @@ public class BubbleSort {
 			for (int j = arr.length - 1; j >= i; j--) {
 				if (arr[j - 1] > arr[j]) {
 					swap(arr, j - 1, j);
+				}
+			}
+		}
+		print(arr);
+	}
+
+	/**
+	 * 优化过的冒泡排序
+	 * 
+	 * @return
+	 */
+	public void sort2() {
+		int[] arr = array.clone();
+		boolean flag = true;
+		for (int i = 1; i < arr.length && flag; i++) {
+			flag = false;
+			for (int j = arr.length - 1; j >= i; j--) {
+				if (arr[j] < arr[j - 1]) {
+					swap(arr, j - 1, j);
+					flag = true;
 				}
 			}
 		}
