@@ -2,6 +2,7 @@ package bubblesort;
 
 /**
  * 冒泡排序法 ：两两进行比较，如果满足条件，互换位置
+ * 时间复杂度 o(n^2)
  * 
  * @author uncle
  * 
