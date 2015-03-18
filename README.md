@@ -16,6 +16,9 @@ Algorithms Tests
 堆排序相当于简单选择排序的升级，他们同属于选择排序类  
 快速排序是冒泡排序的升级，他们同属于交换排序类  
 
-将书中的总结在这里：
+将书中（大话数据结构）的总结在这里：
+
+![image](https://github.com/uncledb/Algorithms/blob/master/imgs/class.jpg)   
+![image](https://github.com/uncledb/Algorithms/blob/master/imgs/sum.jpg)
 
 
