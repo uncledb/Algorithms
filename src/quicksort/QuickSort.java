@@ -1,23 +1,28 @@
 package quicksort;
 
 /**
- * 快速排序法 目前最优的排序算法 O(nlogn)
+ * 快速排序法 目前最优的排序算法 O(nlogn) 在数据里大的时候优势明显
  * 
  * @author uncle
  * 
  */
 public class QuickSort {
 	static int a[] = { 2, 4, 7, 5, 2, 9, 0, 6, 8, 1, 3 };
-	int n;// 定义全局变量，这两个变量需要在子函数中使用
 
 	public static void main(String[] args) {
 		QuickSort q = new QuickSort();
-		q.quicksort(0, a.length - 1);
+		q.quicksort(1, a.length - 1);
 		for (int i = 0; i < a.length; i++) {
-			System.out.println(a[i]);
+			System.out.print(a[i] + ",");
 		}
 	}
 
+	/**
+	 * 递归的快速排序
+	 * 
+	 * @param left
+	 * @param right
+	 */
 	public void quicksort(int left, int right) {
 		int i, j, t, temp;
 		if (left > right)
@@ -28,11 +33,13 @@ public class QuickSort {
 		j = right;
 		while (i != j) {
 			// 顺序很重要，要先从右边开始找
-			while (a[j] >= temp && i < j)
+			while (a[j] >= temp && i < j) {
 				j--;
+			}
 			// 再找右边的
-			while (a[i] <= temp && i < j)
+			while (a[i] <= temp && i < j) {
 				i++;
+			}
 			// 交换两个数在数组中的位置
 			if (i < j) {
 				t = a[i];
